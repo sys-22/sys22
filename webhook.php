@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Copyright 2016 LINE Corporation
  *
@@ -15,12 +14,9 @@
  * License for the specific language governing permissions and limitations
  * under the License.
  */
-
 require_once('./LINEBotTiny.php');
-
 $channelAccessToken = 'aarolWY72wOHqSjVzrD0O3LFi09Gd7uWKOYPRMr70g+WqhvgjzYBPy9b41eX4AKzCbfjk2+dcsv/8QdmzxB0hShZiOk6YfezZMmPxwqV6GljEz96K9cfONuDw6FFDU+0LW+O8rkkAkmrKL3dMY0E+gdB04t89/1O/w1cDnyilFU=';
 $channelSecret = '6c8f8525ae2942eb280664ffbac48ae0';
-
 $client = new LINEBotTiny($channelAccessToken, $channelSecret);
 foreach ($client->parseEvents() as $event) {
     switch ($event['type']) {
@@ -48,3 +44,5 @@ foreach ($client->parseEvents() as $event) {
             break;
     }
 };
+
+?>
